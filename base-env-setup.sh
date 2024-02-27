@@ -1,13 +1,6 @@
 #!/bin/bash
 DIR="$(cd "$(dirname "$0")" && pwd)"
 source $DIR/cqsw-paas-config.sh 
-ping -c 4 www.baidu.com > /dev/null
-if [ $? -ne 0 ]; then
-	systemctl enable NetworkManager
-	systemctl restart NetworkManager
-	echo "Failed to install,Please check Network"
-	exit
-else
 apt -y install expect
 ##check Host Mapping
 if grep -q "$Master_IP $Master_NAME" /etc/hosts; then
@@ -65,4 +58,3 @@ fi
 ##Check Swap
 sudo swapoff -a
 sed -i '/swap/d' /etc/fstab
-fi
