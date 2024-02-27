@@ -3,7 +3,8 @@ DIR="$(cd "$(dirname "$0")" && pwd)/../"
 source $DIR/cqsw-paas-config.sh
 Tar_DIR="$(cd "$(dirname "$0")" && pwd)"
 ##Install Docker Harbor
-tar -zxvf $Tar_DIR/harbor-online-installer-v2.10.0.tgz
+wget https://github.com/goharbor/harbor/releases/download/v2.10.0/harbor-offline-installer-v2.10.0.tgz
+tar -zxvf $Tar_DIR/harbor-offline-installer-v2.10.0.tgz
 Harbor_DIR="$(cd "$(dirname "$0")" && pwd)/harbor"
 cp $Harbor_DIR/harbor.yml.tmpl $Harbor_DIR/harbor.yml
 sed -i "s/hostname: .*/hostname: $Harbor_IP/g" $Harbor_DIR/harbor.yml
