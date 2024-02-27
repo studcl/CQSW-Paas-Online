@@ -1,6 +1,11 @@
 # CQSW-Paas-Online
 
 CQSW-Paas-Online是一个利用shell脚本帮助用户安装Docker以及部署K8S集群，用户只需要根据自己的实际情况填写cqsw-paas-config.sh，依次执行安装脚本即可完成部署。
+##注意！
+- 适用主机：Ubuntu22.04.2
+- 每台机器 2 GB 以上的内存，内存不足时应用会受限制。
+- 用作控制平面节点的计算机上至少有 2 个 CPU。
+- 集群中所有计算机之间具有完全的网络连接。
 
 ```
 CQSW-Paas-Online
