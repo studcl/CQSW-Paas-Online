@@ -16,7 +16,7 @@ CQSW-Paas-Online
 │   ├── Docker-install.sh ##部署设置Docker和部署cri-dockerd（直接执行）
 │   ├── Harbor-config.sh  ##设置Docker Harbor，完成部署后才可执行（直接执行）
 │   ├── Harbor-install.sh ##部署Docker Harbor（直接执行）
-│   ├── harbor-online-installer-v2.10.0.tgz ##Docker Harbor在线压缩包
+│   ├── harbor-offline-installer-v2.10.0.tgz ##Docker Harbor离线压缩包
 │   ├── images-pull.sh ##下载K8S所需要的镜像（直接执行）
 │   └── images-tag-push.sh ##推送K8S镜像到Docker Harbor仓库中（直接执行）
 └── kubernetes
